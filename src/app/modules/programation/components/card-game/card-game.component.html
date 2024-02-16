@@ -1,0 +1,24 @@
+<div class="card d-flex flex-row p-3 mb-4 shadow-sm">
+  <section class="p-2 d-flex flex-column justify-content-center align-items-center">
+    <img class="img-fluid w-50" [src]="imageLocal" [alt]="'Logo '+ game.nombreLocal"
+      (error)="setDefaultImage($event)" />
+    <p class="m-0 text-center small">{{game.nombreLocal}}</p>
+  </section>
+  <section class="d-flex flex-column flex-shrink-0 text-center">
+    <span class="small fw-lighter">{{game.fechaTexto}}</span>
+    <span class="badge rounded-pill mt-1" [style.backgroundColor]="game.colorEstado">{{game.descripcionEstado}}</span>
+    <div class="marcador d-flex justify-content-between my-2">
+      <span class="fs-4 fw-bolder">{{game.resultadoLocal}}</span>
+      <span class="fs-4">-</span>
+      <span class="fs-4 fw-bolder">{{game.resultadoVisita}}</span>
+    </div>
+    <span [style.color]="game.colorEstadio">{{game.nombreEstadio}}</span>
+    <p class="fw-medium mt-2">{{game.fechaNumeroTexto}}</p>
+  </section>
+
+  <section class="p-2 d-flex flex-column justify-content-center align-items-center">
+    <img class="img-fluid w-50" [src]="imageVisit" [alt]="'Logo '+ game.nombreVisita"
+      (error)="setDefaultImage($event)" />
+    <p class="m-0 text-center small">{{game.nombreVisita}}</p>
+  </section>
+</div>

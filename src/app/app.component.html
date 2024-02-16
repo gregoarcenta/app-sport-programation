@@ -1,1 +1,7 @@
-<h1 class="fw-bold text-center">{{title}}</h1>
+@if (loaderService.active()) {
+<app-loader />
+}
+
+<app-layout>
+  <router-outlet/>
+</app-layout>

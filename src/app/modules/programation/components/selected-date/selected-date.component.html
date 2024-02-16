@@ -1,0 +1,9 @@
+@defer (when programationService.dateSelected()) {
+  <section class="text-center bg-warning py-2 mb-3 rounded-2">
+    {{programationService.dateSelected() | date:'EEEE, d MMMM y'}}
+  </section>
+}@placeholder(minimum 600ms) {
+  <section class="placeholder-glow my-2">
+    <span class="placeholder col-12 bg-warning" style="height: 40px;"></span>
+  </section>
+}

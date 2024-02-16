@@ -1,0 +1,3 @@
+<button class="mx-1 h-auto btn" [class]="getClass(dateItem)" [id]="dateItem.date" (click)="onChangeDate(dateItem)">
+  {{dateItem.date | date:'EEE d MMM'}}
+</button>

@@ -1,0 +1,15 @@
+@defer (when programationService.dates().length) {
+<section class="d-flex align-items-center">
+  <img src="assets/izquierda.png" alt="Izquierda en Círculo" height="40" width="40" (click)="scrollLeft()">
+  <div class="scroll-container mx-2" #scrollContainer (wheel)="horizontalScroll($event)">
+    @for (itemDate of programationService.dates(); track itemDate.id) {
+    <app-item-date class="scroll-item" [dateItem]="itemDate"></app-item-date>
+    }
+  </div>
+  <img src="assets/derecha.png" alt="Izquierda en Círculo" height="40" width="40" (click)="scrollRight()">
+</section>
+}@placeholder(minimum 600ms) {
+  <section class="placeholder-glow scroll-container m-0">
+    <span class="placeholder col-12"></span>
+  </section>
+}

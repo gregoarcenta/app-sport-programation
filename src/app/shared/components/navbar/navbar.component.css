@@ -1,0 +1,13 @@
+.nav-link {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: whitesmoke;
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.router-link-active {
+  color: green;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
